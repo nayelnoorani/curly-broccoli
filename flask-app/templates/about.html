@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block title %}About Us{% endblock %}
+
+{% block content %}
+    <h2>About Us</h2>
+    <p>This is the about page.</p>
+    <h3>Team Members</h3>
+    <ul>
+        {% for member in team_members %}
+            <li>{{ member.name }} - {{ member.email }}</li>
+        {% endfor %}
+    </ul>
+{% endblock %}
